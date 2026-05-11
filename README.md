@@ -16,3 +16,8 @@ conda env create -f environment.yml
 - Place the four CSV files from the `data/` folder into a `data/` folder in your working directory.
 - Activate the environment and run `python create_gapminder_db.py` to create `gapminder.db` in the `data/` folder.
 - Activate the environment and run  `python plot_with_px.py` to generate `gapminder_clone.html`
+
+## Key Takeaways
+- Multi-table database design with SQL views: Loaded four separate tables into SQLite and used `CREATE VIEW` to join them, keeping raw data clean and the plotting script simple.
+- Encoding multiple variables in a single chart: The bubble chart maps five dimensions simultaneously (x, y, size, color, animation). Choices like a log scale for GDP required thinking about both the data distribution and the audience.
+- Interactive vs. static output: Chose `plotly.express` over `matplotlib` to produce an interactive HTML file — letting viewers explore countries and years themselves. Knowing when each tool is appropriate matters as much as knowing how to use them.
